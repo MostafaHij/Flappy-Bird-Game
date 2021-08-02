@@ -57,15 +57,16 @@ class Bird {
     flip() {
         this.vy -= 2; // push bird up
 
-        if (frame % 3 == 0) {
+        
+        if (frame % 3 === 0) {
             if (this.frameX < 3) {
                 this.frameX++;
-
             } else {
-                this.frameX = 0;
-                this.frameY++;
 
+                this.frameX = 0;
                 if (this.frameY < 3) {
+                    this.frameY++;
+                } else {
                     this.frameY = 0;
                 }
             }
